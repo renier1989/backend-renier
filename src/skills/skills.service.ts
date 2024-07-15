@@ -14,14 +14,13 @@ export class SkillsService extends PrismaClient implements OnModuleInit {
     
   }
   create(createSkillDto: CreateSkillDto) {
-    // return createSkillDto;
     return this.skills.create({
       data: createSkillDto
     });
   }
 
   findAll() {
-    return `This action returns all skills`;
+    return this.skills.findMany({});
   }
 
   findOne(id: number) {
